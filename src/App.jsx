@@ -1,7 +1,9 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Adddata from "./Add-data";
+import Adddata from "./Adddata";
 import Display from "./Display";
-import Navbar from "./navbar";
+import Navbar from "./Navbar";
+
+
 import "./App.css";
 
 const App = () => {
