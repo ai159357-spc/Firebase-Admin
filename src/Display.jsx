@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { collection, getDocs } from "firebase/firestore";
-import { db } from './Firebase/firebase';
+import { db } from './firebase/firebase';
 import "./App.css";
 
 const Display = () => {
