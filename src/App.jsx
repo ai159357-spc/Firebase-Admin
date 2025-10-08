@@ -5,6 +5,9 @@ import Navbar from "./navbar";
 import "./App.css";
 
 const App = () => {
+
+
+
   return (
     <BrowserRouter>
       <Navbar />

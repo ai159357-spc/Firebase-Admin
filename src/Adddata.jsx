@@ -37,54 +37,58 @@ const Adddata = () => {
   };
 
   return (
-    <div className="page-wrap">
-      <div className="card">
-        <h2 className="card-title">Add Product</h2>
+    <div className='main-body'>
 
-        <label className="field">
-          <span className="label">Product Name</span>
-          <input
-            type="text"
-            placeholder="Enter product name"
-            value={productname}
-            onChange={(e) => setProductName(e.target.value)}
-            className="input"
-          />
-        </label>
+      <div className="page-wrap">
+        <div className="add-product-card">  {/* changed class name */}
+          <h2 className="card-title">Add Product</h2>
 
-        <label className="field">
-          <span className="label">Product URL</span>
-          <input
-            type="text"
-            placeholder="Enter product url"
-            value={producturl}
-            onChange={(e) => setProductURL(e.target.value)}
-            className="input"
-          />
-        </label>
+          <label className="field">
+            <span className="label">Product Name</span>
+            <input
+              type="text"
+              placeholder="Enter product name"
+              value={productname}
+              onChange={(e) => setProductName(e.target.value)}
+              className="input"
+            />
+          </label>
 
-        <label className="field">
-          <span className="label">Product Price</span>
-          <input
-            type="text"
-            placeholder="Enter product price"
-            value={productprice}
-            onChange={(e) => setProductPrice(e.target.value)}
-            className="input"
-          />
-        </label>
+          <label className="field">
+            <span className="label">Product URL</span>
+            <input
+              type="text"
+              placeholder="Enter product url"
+              value={producturl}
+              onChange={(e) => setProductURL(e.target.value)}
+              className="input"
+            />
+          </label>
 
-        <div className="actions">
-          <button
-            className="btn"
-            onClick={handleAdd}
-            disabled={loading}
-          >
-            {loading ? "Adding..." : "Add Data"}
-          </button>
+          <label className="field">
+            <span className="label">Product Price</span>
+            <input
+              type="text"
+              placeholder="Enter product price"
+              value={productprice}
+              onChange={(e) => setProductPrice(e.target.value)}
+              className="input"
+            />
+          </label>
+
+          <div className="actions">
+            <button
+              className="btn"
+              onClick={handleAdd}
+              disabled={loading}
+            >
+              {loading ? "Adding..." : "Add Data"}
+            </button>
+          </div>
         </div>
       </div>
     </div>
+
   )
 }
 
