@@ -3,6 +3,7 @@ import { collection, addDoc } from "firebase/firestore";
 import { db } from './firebase data/firbase';
 
 import "./App.css";
+import Navbar from './Navbar';
 
 const Adddata = () => {
   const [productname, setProductName] = useState("");
@@ -38,7 +39,7 @@ const Adddata = () => {
 
   return (
     <div className='main-body'>
-
+      <Navbar/>
       <div className="page-wrap">
         <div className="add-product-card">  {/* changed class name */}
           <h2 className="card-title">Add Product</h2>

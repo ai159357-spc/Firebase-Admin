@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { collection, getDocs } from "firebase/firestore";
 import { db } from './firebase data/firbase';
 import "./App.css";
+import Navbar from './Navbar';
 
 const Display = () => {
   const [users, setUsers] = useState([]);
@@ -21,19 +22,24 @@ const Display = () => {
   }, []);
 
   return (
-    <div className="page-wrap">
-      {users.length > 0 ? (
-        users.map((user) => (
-          <div className="card" key={user.id}>
-            <img src={user.url} alt={user.name} style={{ width: '100%', borderRadius: '8px', marginBottom: '10px' }} />
-            <h3 className="card-title">{user.name}</h3>
-            <p>Price: ₹{user.price}</p>
-          </div>
-        ))
-      ) : (
-        <p>Loading data...</p>
-      )}
-    </div>
+    <>
+      <Navbar />
+
+      <div className="page-wrap">
+        {users.length > 0 ? (
+          users.map((user) => (
+            <div className="card" key={user.id}>
+              <img src={user.url} alt={user.name} style={{ width: '100%', borderRadius: '8px', marginBottom: '10px' }} />
+              <h3 className="card-title">{user.name}</h3>
+              <p>Price: ₹{user.price}</p>
+            </div>
+          ))
+        ) : (
+          <p>Loading data...</p>
+        )}
+      </div>
+    </>
+
   );
 };
 
