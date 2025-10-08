@@ -25,8 +25,8 @@ const Display = () => {
       {users.length > 0 ? (
         users.map((user) => (
           <div className="card" key={user.id}>
-            <h3 className="card-title">{user.name}</h3>
             <img src={user.url} alt={user.name} style={{ width: '100%', borderRadius: '8px', marginBottom: '10px' }} />
+            <h3 className="card-title">{user.name}</h3>
             <p>Price: ₹{user.price}</p>
           </div>
         ))
