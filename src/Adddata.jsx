@@ -1,9 +1,9 @@
 import { useState } from 'react';
 import { collection, addDoc } from "firebase/firestore";
 import { db } from './firebase data/firbase';
-
 import "./App.css";
-import Navbar from './Navbar';
+import Navbar from "./Navbar";
+
 
 const Adddata = () => {
   const [productname, setProductName] = useState("");
